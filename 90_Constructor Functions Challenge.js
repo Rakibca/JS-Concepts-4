@@ -22,6 +22,15 @@ function Character(name) {
   this.collectedItemsArr = [];
   this.addItem = function (item) {
     this.collectedItemsArr.push(item);
-    console.log(`${this.name} now has ${this.collectedItemsArr}`);
+    console.log(`${this.name} now has: ${this.collectedItemsArr.join(', ')}`);
   };
 }
+
+const wizard = new Character('Merlin');
+const witch = new Character('Hermione');
+
+wizard.addItem('wand'); // Merlin now has: wand
+wizard.addItem('map'); // Merlin now has: wand, map
+wizard.addItem('potion'); // Merlin now has: wand, map, potion
+witch.addItem('sword'); // Hermione now has: sword
+witch.addItem('cloak of invisibility'); // Hermione now has: sword, cloak of invisibility
