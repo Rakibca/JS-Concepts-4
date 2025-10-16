@@ -48,6 +48,6 @@ const myDog = new Dog();
 const myCat = new Cat();
 const genericAnimal = new Animal();
 
-myDog.speak(); // Output: Dog barks
-myCat.speak(); // Output: Cat meows
-genericAnimal.speak(); // Output: Animal makes a sound
+myDog.speak(); // Dog barks
+myCat.speak(); // Cat meows
+genericAnimal.speak(); // Animal makes a sound
