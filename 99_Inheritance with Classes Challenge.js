@@ -20,8 +20,8 @@ Challenge:
        which calls Event's getDetails method to get the 
        basic details of the event. It should return this string:
        ${eventBasics} Match: ${this.player1} vs ${this.player2}
-    4. Uncomment my code below to create a new instance of TennisMatch
-       and call the getDetails method.
+    4. Create a new instance of TennisMatch.
+    5. Call the getDetails method.
 */
 
 /*
@@ -35,3 +35,29 @@ class ChildClass extends ParentClass {
   }
 }
 */
+
+//////////////////////
+// SEE ANSWER BELOW //
+//////////////////////
+
+class TennisMatch extends Event {
+  constructor(name, location, date, player1, player2) {
+    super(name, location, date);
+    this.player1 = player1;
+    this.player2 = player2;
+  }
+  getDetails() {
+    const eventBasics = super.getDetails();
+    return `${eventBasics} Match: ${this.player1} vs ${this.player2}`;
+  }
+}
+
+const tennisMatch = new TennisMatch(
+  'Grand Slam Final',
+  'Wimbledon',
+  '2025-07-15',
+  'J Bloggs',
+  'B Doe'
+);
+
+console.log(tennisMatch.getDetails()); // Event: Grand Slam Final, Location: Wimbledon, Date: 2025-07-15 Match: J Bloggs vs B Doe
